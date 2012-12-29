@@ -26,6 +26,7 @@ Bundle 'tomasr/molokai'
 " ...
 
 " vim-scripts repos
+Bundle 'dbext.vim'
 
 " non github repos
 
@@ -71,6 +72,7 @@ set encoding=utf8
 :noremap <C-right> :bnext<CR>
 
 " Miscellaneous stuff
+set number
 
 set expandtab
 
