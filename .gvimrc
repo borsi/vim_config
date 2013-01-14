@@ -20,18 +20,18 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-scripts/buftabs'
 Bundle 'rstacruz/sparkup'
 Bundle 'tomasr/molokai'
+Bundle 'skammer/vim-css-color'
 
 " ...
 " ide stuff
 " ...
 
 " vim-scripts repos
-Bundle 'dbext.vim'
+" Bundle 'dbext.vim'
 
 " non github repos
 
 " ...
-
 filetype plugin indent on "required!
 "
 " Brief help
@@ -56,7 +56,6 @@ set noerrorbells
 set novisualbell
 
 " Looks
-
 syntax enable
 set background=dark
 colorscheme molokai
@@ -70,6 +69,12 @@ set encoding=utf8
 " Navigation for Buftabs
 :noremap <C-left> :bprev<CR>
 :noremap <C-right> :bnext<CR>
+
+" Navigation between vertical splits
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 " Miscellaneous stuff
 set number
@@ -95,3 +100,5 @@ map <leader>bd :Bclose<CR>
 " Close all the buffers
 map <leader>ba :1,1000 bd!<CR>
 
+" Start nerdtree in the beginning,
+nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
